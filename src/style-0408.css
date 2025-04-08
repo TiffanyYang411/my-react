@@ -1,0 +1,25 @@
+body {
+    background-color: #ccc;
+}
+
+#container {
+    width: 768px;
+    margin: 0 auto;
+    background-color: white;
+    /* border: 1px solid red; */
+    padding: 20px;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+.img1 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.img2 {
+    width: 100%;
+}
