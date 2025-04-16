@@ -82,19 +82,19 @@ function App() {
                                                                             hour: 'numeric',
                                                                             minute: 'numeric'
                                                                         })
-                                                                    }<br/>
-                                                                    ~<br/>
+                                                                    }<br />
+                                                                    ~<br />
                                                                     {
                                                                         new Date(time.endTime).toLocaleString(undefined, {
                                                                             hour: 'numeric',
                                                                             minute: 'numeric'
                                                                         })
-                                                                    }<br/>
+                                                                    }<br />
                                                                     {/* 天氣圖：使用執行路徑，所以要放在public資料夾中才讀得到 */}
                                                                     {/* 圖片放到public資料夾內 */}
                                                                     {/* 若圖片用import載入，會不好做 */}
                                                                     {/* <img src="/weatherIcon/晴時多雲.svg" alt="" /> */}
-                                                                    <img src={`/weatherIcon/${time.parameter.parameterName}.svg`} alt="" />
+                                                                    <img src={`./weatherIcon/${time.parameter.parameterName}.svg`} alt="" />
                                                                     {/* 天氣名稱 */}
                                                                     <div className="mt-2">
                                                                         {/* 晴時多雲 */}
