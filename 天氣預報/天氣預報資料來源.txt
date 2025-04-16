@@ -1,0 +1,5 @@
+*天氣資料
+https://data.gov.tw/dataset/6069
+
+*天氣圖
+https://www.cwa.gov.tw/V8/C/K/Weather_Icon.html
