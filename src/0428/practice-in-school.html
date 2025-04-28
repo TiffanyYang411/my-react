@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- HTML DOM 分頁效果 -->
+    <div>
+        <button onclick="changeToPage1();">Page1</button>
+    
+        <span onclick="changeToPage2();">Page2</span>
+        <button onclick="changeToPage2();">下一步</button>
+    
+        <span onclick="changeToPage3();">Page3</span>
+        <button onclick="changeToPage3();">Page3</button>
+    </div>
+
+    <hr>
+
+    <div id="page1">Page1</div>
+    <div id="page2" style="display: none;">
+        <!-- lorem為亂碼 -->
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa voluptatum doloremque sit quidem totam minus
+        quo molestiae perspiciatis a sapiente similique exercitationem porro, libero dicta ad consectetur aliquam
+        accusantium aut.
+    </div>
+    <div id="page3" style="display: none;">
+        <!-- lorem為亂碼 -->
+        最近xxxxxx
+    </div>
+
+    <script>
+        function change() {
+            // 取得標籤物件
+            let content = document.querySelector("#content");
+            // 操作標籤物件
+            // 更換內容
+            content.innerHTML = "內容已經更新了"
+            // 加上類別名稱
+            content.className = "text";
+            //更改文字的大小
+            content.style.fontsize = "30px"
+            // 變色
+            content.style.color = "red";
+        }
+
+        function changeToPage1() {
+            // 隱藏Page2
+            let page2 = document.querySelector("#page2");
+            page2.style.display = "none";
+            // 隱藏Page3
+            let page3 = document.querySelector("#page3");
+            page3.style.display = "none";
+            // 顯示Page1
+            let page1 = document.querySelector("#page1");
+            page1.style.display = "block";
+        }
+
+        function changeToPage2() {
+            // 隱藏Page1
+            let page1 = document.querySelector("#page1");
+            page1.style.display = "none";
+            // 隱藏Page3
+            let page3 = document.querySelector("#page3");
+            page3.style.display = "none";
+            // 顯示Page2
+            let page2 = document.querySelector("#page2");
+            page2.style.display = "block";
+        }
+
+        function changeToPage3() {
+            // 隱藏Page1
+            let page1 = document.querySelector("#page1");
+            page1.style.display = "none";
+            // 隱藏Page2
+            let page2 = document.querySelector("#page2");
+            page2.style.display = "none";
+            // 顯示Page3
+            let page3 = document.querySelector("#page3");
+            page3.style.display = "block";
+        }
+    </script>
+</body>
+
+</html>

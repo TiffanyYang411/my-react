@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <div id="page1">我是page1</div>
+  <div id="page2" style="display: none;">我是page2</div>
+  <div id="page3" style="display: none;">我是page3</div>
+
+  <button id="btn1" onclick="changePage('page2')">第二步</button>
+  <button id="btn2" onclick="changePage('page1')" style="display: none;">第一步</button>
+  <button id="btn3" onclick="changePage('page3')" style="display: none;">第三步</button>
+  <button id="btn4" onclick="changePage('page2')" style="display: none;">第二步</button>
+
+  <script>
+    function changePage(targetPage) {
+      // 先把所有頁面隱藏
+      document.querySelectorAll('#page1, #page2, #page3').forEach(page => {
+        page.style.display = "none";
+      });
+
+      // 再顯示目標頁面
+      document.querySelector(`#${targetPage}`).style.display = "block";
+
+      // 按鈕顯示控制
+      // 預設先全部隱藏
+      document.querySelectorAll('#btn1, #btn2, #btn3, #btn4').forEach(btn => {
+        btn.style.display = "none";
+      });
+
+      // 根據目前頁面，決定要顯示哪些按鈕
+      if (targetPage === 'page1') {
+        document.querySelector('#btn1').style.display = "block";
+      } else if (targetPage === 'page2') {
+        document.querySelector('#btn2').style.display = "block";
+        document.querySelector('#btn3').style.display = "block";
+      } else if (targetPage === 'page3') {
+        document.querySelector('#btn4').style.display = "block";
+      }
+    }
+  </script>
+
+</body>
+</html>
