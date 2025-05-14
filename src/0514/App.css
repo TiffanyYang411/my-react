@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+#wrapper {
+    /* border: 1px solid red; */
+    width: 1000px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* 按鈕區 */
+#filterBtn {
+    padding: 30px;
+}
+
+#filterBtn a {
+    border: 1px solid #ddd;
+    margin: 0 10px;
+    padding: 7px 30px;
+    border-radius: 30px;
+    background: linear-gradient(
+            /* to bottom, */
+            #fff 50%, #ddd 100%);
+    /* 漸層按鈕 */
+}
+
+#filterBtn a:hover {
+    background: #fff;
+    color: red;
+}
+
+/* 作用中的按鈕被左鍵點擊一下時，會變色 */
+/* active類別是動態給的 */
+#filterBtn a.active {
+    color: red;
+    font-weight: bold;
+}
+
+/* 圖片區 */
+#filterList ul {
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#filterList ul li {
+    margin: 10px;
+    width: 150px;
+}
+
+#filterList ul li img {
+    width: 150px;
+}
